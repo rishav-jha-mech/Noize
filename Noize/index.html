@@ -1,0 +1,163 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=100, initial-scale=1.0">
+    <title>Noize</title>
+    <link rel="stylesheet" href="style.css">
+    <!-- fontawesome -->
+
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.3/css/all.min.css"
+        integrity="sha512-iBBXm8fW90+nuLcSKlbmrPcLa0OT92xO1BIsZ+ywDWZCvqsWgccV3gFoRBv0z+8dLJgyAHIhR35VZc2oM/gI1w=="
+        crossorigin="anonymous" />
+
+</head>
+<body>
+<div id="bg1" class="bg">                   <!--ONE SHURU-->
+<div class="header">                                                            <!--HEADER SHURU-->
+    <div class="logo"><img  src="images/logo.png"> <h1>Noize</h1> </div>                    <!--LOGO SHRUR KHATAM-->                                                     <!--SOCIAL KHATAM-->
+    <div class="navlinks">                                                   <!--NAVLINK SHURU-->
+        <h2 class="active">Home</h2>
+        <h2>About Us</h2>
+        <h2>Gallery</h2>
+        <h2>News</h2>
+        <h2>Concerts</h2>
+        <h2>Videos</h2>
+        <h2>Features</h2>
+        </div>                                                                          <!--NAVLINK KHATAM-->
+        <div class="social">                                                            <!--SOCIAL SHURU-->
+        <i class="fab fa-spotify"></i>
+        <i class="fab fa-youtube"></i>
+        <i class="fab fa-linkedin-in"></i>
+        <i class="fab fa-facebook-f"></i>
+        </div>
+        <div  id="hamburg" class="ham" onclick="show()"> <i id="smh1" class="fas fa-bars"></i>
+        </div>
+        </div>
+        <div id="mobLinks" class="navlinksMob">                                                   <!--NAVLINK SHURU-->
+        <h6 class="line active">Home</h6>
+        <h6 class="line">About Us</h6>
+        <h6 class="line">Gallery</h6>
+        <h6 class="line">News</h6>
+        <h6 class="line">Concerts</h6>
+        <h6 class="line">Videos</h6>
+        <h6 class="line" id="f">Features</h6>
+        </div>
+        
+        <div id="mobhide" class="cen"> <strong> FEEL THE <br><x id="noise">  NOISE  </x> </strong> </div>
+        
+    </div>
+</div>
+<div class="contact">
+
+<div class="left">
+
+<div class="r1">
+    <div class="card1">
+<i class="fas fa-map-marker-alt"></i>
+<div class="writeup">
+<h3> Find Us</h3>
+<p>Marylenebone Rd, Marylenebone,<br>London NW1 5H, UK
+</p>
+</div>
+</div>
+
+<div class="card2">
+<i class="fas fa-phone-alt"></i>
+<div class="writeup">
+<h3> Call Us</h3>
+<p>+456 481 1772<br>
+   +4326 5825 56  
+</p>
+</div>
+</div>
+</div>
+<div class="r2">
+<div class="card3">
+<i class="far fa-clock"></i>
+<div class="writeup">
+<h3> Working Hours</h3>
+<p>Mon-Fri: 8AM-5PM<br>
+   Sat-Sun: 8AM-2PM
+</p>
+</div>
+</div>
+
+<div class="card4">
+<i class="far fa-envelope"></i>
+<div class="writeup">
+<h3> Write To Us</h3>
+<p>Office@noise.com<br>
+Press@noise.com
+</p>
+</div>
+</div>
+
+</div>
+</div>
+<!--DARS ON LEFT NDS HERE-->
+<div class="right">
+<div class="content">
+<div class="ekrow">
+<input name="name"  id="name" type="text" placeholder="Your Name...">
+<input name="email" id="email" type="text" placeholder="Your Email...">
+</div>
+<textarea name="msg" id="msg" type="text" rows="4" cols="50" placeholder="Your Message...">
+</textarea>
+<div class="center">  <button id="send" onclick="send()"> Send   </button> </div>
+</div>
+</div>
+</div>
+<div class="lastpage">
+<iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3356.273444426049!2d-117.03579448533701!3d32.731929093591376!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x80d9512798ef4a71%3A0xa405c1a66f682a49!2sMt%20Vernon%20St%2C%20Lemon%20Grove%2C%20CA%2091945%2C%20USA!5e0!3m2!1sen!2sin!4v1618335509279!5m2!1sen!2sin"  style="border:0;" allowfullscreen="" loading="lazy"></iframe><br>
+<div class="tocenter">
+<img id="lagos" src="images/logo.png">
+<h4>Noize</h4>
+<h5> 2020 vernon street, san diego<br>
+    +(760) 707-4815|M: info@noize.com
+</h5> 
+</div>
+<div class="footerLogo">
+    <i class="fab fa-spotify"></i>
+    <i class="fab fa-youtube"></i>
+    <i class="fab fa-linkedin-in"></i>
+    <i class="fab fa-facebook-f"></i>
+</div>
+<div class="footer">
+made by rishav jha 
+</div>
+</div>
+</div>
+</body>
+<script>
+    var i=0;
+    function show(){
+        if(i==0){
+        i++;
+        
+        document.getElementById("bg1").style.backgroundColor="black";
+        document.getElementById("mobLinks").style.display="flex";
+        document.getElementById("mobhide").style.display="none";
+        document.getElementById("smh1").classList.remove('fa-bars');
+        document.getElementById("smh1").classList.add('fa-times');
+    }
+        else if(i==1){
+        i--;
+        document.getElementById("bg1").style.background="url('bgx.jpg')";
+        document.getElementById("bg1").style.height="100vh";
+        document.getElementById("bg1").style.backgroundPosition="center";
+        document.getElementById("bg1").style.backgroundSize="cover";
+        document.getElementById("mobLinks").style.display="none";
+        document.getElementById("mobhide").style.display="flex";
+        document.getElementById("smh1").classList.remove('fa-times');
+        document.getElementById("smh1").classList.add('fa-bars');
+    }
+    }
+function send(){
+
+    document.getElementById("send").innerHTML="Sent !";
+    document.getElementById("send").style.background="orangered";
+}
+</script>
+</html>
