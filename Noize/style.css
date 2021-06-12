@@ -5,17 +5,32 @@
     box-sizing: border-box;
     font-family: 'Poppins', sans-serif;
 }
-
+* a{
+    text-decoration: none;
+    color: white;
+}
+.logo{
+    color: black;
+}
+* input,
+textarea{
+    outline: none;
+}
 ::-webkit-scrollbar{
     display: none;
 }
 .active{
     color: aqua;
 }
+.fa-caret-down{
+    font-size: 10px;
+    color: #999;
+    margin-left: 6px;
+}
 .bg{
 
     background-image: url(images/bgx.jpg);
-    height: 100vh;    
+    height: 89vh;    
     background-blend-mode: color;
     overflow-x: hidden;
     overflow-y: hidden;
@@ -63,52 +78,6 @@
     border-radius: 50%;
     transition: 0.5s;
 }
-
-.fa-spotify,
-.fa-youtube,
-.fa-facebook-f,
-.fa-linkedin-in{
-    transition: 0.5s;
-}
-.fa-spotify:hover,
-.fa-youtube:hover,
-.fa-facebook-f:hover,
-.fa-linkedin-in:hover{
-    transition: 0.5s;
-    background-color: transparent;
-}
-.fa-spotify:hover{
-    
-    color: 	chartreuse;
-    box-shadow: 0 0 5px 3px chartreuse,
-                0 0 5px 3px chartreuse,
-                0 0 5px 3px chartreuse,
-                0 0 5px 3px chartreuse;
-}
-.fa-youtube:hover{
-    
-    color: red;
-    box-shadow: 0 0 5px 3px red,
-                0 0 5px 3px red,
-                0 0 5px 3px red,
-                0 0 5px 3px red;
-}
-.fa-linkedin-in:hover{
-    
-    color: #0077b5;
-    box-shadow: 0 0 5px 3px blue,
-                0 0 5px 3px blue,
-                0 0 5px 3px blue,
-                0 0 5px 3px blue;
-}
-.fa-facebook-f:hover{
-    
-    color:  rgb(3, 147, 204);
-    box-shadow: 0 0 5px 3px rgb(3, 147, 204),
-                0 0 5px 3px rgb(3, 147, 204),
-                0 0 5px 3px rgb(3, 147, 204),
-                0 0 5px 3px rgb(3, 147, 204);
-}
 .ham{
     background-color: white;
     color: black;
@@ -133,6 +102,20 @@ h2{
     margin-right: 40px;
     position: relative;
     transition: 0.6s;
+}
+h1:hover{
+    color: orangered;
+    background-color: rgba(73, 73, 73, 0.082);
+    transition: 0.6s;
+}
+h2:hover{
+
+    color: aqua;
+    background-color: rgba(73, 73, 73, 0.101);
+    transition: 0.6s;
+}
+#noise{
+    color: azure;
 }
 #f{
     margin-right: 0;
@@ -222,10 +205,6 @@ strong{
     flex-direction: row;
 
 }
-
-.right{
-    padding-top: 100px;
-}
 h3{
     font-size: 28px;
     font-weight: 600;
@@ -238,60 +217,65 @@ p{
     color: aliceblue;
     font-size: 14px;
 }
-.content{
-    margin: 20px;
-    width: 40vw;
 
-}
-.ekrow{
+.right{
+    padding-top: 100px;
+    width: 50%;
     display: flex;
-    flex-direction: row;
 }
-input{
-    padding-left: 20px;
-    background-color: white;
-    border: none;
+.content{
+    width: 100%;
+    padding: 35px;
+    padding-top: 0;
 }
-#name,#email{
-
-    height: 65px;
-    width: 380px;
-    margin-right: 15px;
-    outline: none;    
-
+.right .content .ekrow{
+    justify-content: center;
+    display: flex;
 }
-#msg{
-    margin-top: 20px;
-    height: 300px;
-    width:  499px;
-    padding-left: 20px;
-    padding-top: 20px;
-    outline: none;
-
+.right .content .ekrow input{
+    padding: 23px 0 23px 10px;
+    margin-bottom: 2vw;
 }
-.center{
+.right .content .ekrow input:nth-child(1){
+    width: 50%;
+    margin-left:  4px;
+    margin-right: 4px;
+}
+.right .content .ekrow input:nth-child(2){
+    width: 50%;
+    margin-left:  4px;
+    margin-right: 4px;
+}
+.right .content .ekrow textarea{
+    width: 100%;
+    margin-left:  4px;
+    margin-right: 4px;
+    height: 200px;
+    padding: 23px 0 23px 10px;
+}
+.right .content #fffs{
     display: flex;
     justify-content: center;
-    
+    align-items: center;
+    margin-top: 15px;
+    margin-left:  5px;
+    margin-right: 5px;
 }
-#send{
-    margin-left: 0;
-    padding-left: 0;
-    width: 500px;
-    margin-left: -10px;
-    padding: 12px;
+.right .content .ekrow button{
+    outline: none;
     border: none;
-    background-color: transparent;
     color: white;
     font-size: 20px;
+    font-weight: 500;
+    padding: 13px 0 13px 0;
+    width: 100%;
+    background-color: black;
     border: 1px solid orangered;
-    outline: none;
+    border-radius: 5px;
 }
-
 .lastpage{
-    height: 1100px;
+    min-height: 110vh;
     background-color:#0c0c0c;
-    
 }
 
 .tocenter{
@@ -362,37 +346,19 @@ h5:hover{
     font-size: 20px;
 }
 /*HOVER FUNCTIONS*/
-h1:hover{
-    color: orangered;
-    background-color: rgba(73, 73, 73, 0.082);
-    transition: 0.6s;
-}
-h2:hover{
 
-    color: aqua;
-    background-color: rgba(73, 73, 73, 0.101);
-    transition: 0.6s;
-}
-#noise{
-
-    color: azure;
-}
-strong:hover{
-    letter-spacing: 14px;
-    padding-bottom: 0;
-    padding-left: 100px;
-    padding-right: 100px;
-    transition: 0.5s;
-    font-size: 105px;
-}
 h4:hover{
     color: orangered;
     transition: 0.5s;
 }
 /*MEDIA QUERY FOR RESPONSIVE DESIGN*/
-@media (max-width:1230px){
+@media (max-width:1308px){
     .header{
         align-items: unset;
+    }
+    .right .content .center{
+        margin-left: 0;
+        margin-right: 0;
     }
     .navlinks{
         margin-left: 10px;
@@ -417,28 +383,30 @@ h4:hover{
         text-shadow: 4px 4px rgba(0, 0, 0, 0.411);
     }
     .ekrow{
-        flex-direction: column;
+        /*flex-direction: column;*/
         justify-content: center;
     }
-    #name,#email{
-        margin: 5px;
-        width: 85vw;
-        overflow-x: hidden;
-    }
-    #msg{
-        width: 85vw;
-        overflow-x: hidden;
-    }
     .center{
-        margin: 8px;
-        width: 85vw;
+        width: 100%;
+    }
+    .right .content .ekrow input{
+        width: 100%;
     }
     .left{
         justify-content: center;
         flex-direction: row;
     }
     .right{
-        margin-left: 6vw;
+        width: 100%;
+    }
+    .right .content{
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        flex-direction: column;
+    }
+    .right .content .ekrow{
+        width: 100%;
     }
     /*
     .left{
@@ -458,6 +426,10 @@ h4:hover{
     }
     .ekrow{
         flex-direction: column;
+        width: 100%;
+    }
+    .ekrow input{
+        width: 100% !important;
     }
     .ham:hover{
         display: block;
@@ -469,25 +441,22 @@ h4:hover{
     .navlinks,.social{
         display: none !important;
     }
-    .contact{
-        flex-direction: column;        
-
-    }
-    #msg{
-        height: 40vh;
-        width:  90vw;
-        overflow-x: hidden;
-    }
+    
     .r1,.r2{
         flex-direction: column;
+    
     }
     .right{
         margin-left: 0.5vw;
     }   
-    .center{
-        margin-left: 3vw;
-    }
     strong{
         font-weight: 600;
+    }
+    .right .content .center{
+        margin-left: 0;
+        margin-right: 0;
+    }
+    .right .content .center button{
+        margin: 0;
     }
 }
